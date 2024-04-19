@@ -1,18 +1,16 @@
 // import { Link } from "react-router-dom";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
+import { Outlet } from "react-router-dom";
 
-const App = () => {
+function App () {
   return (
     <>
     <div>
       <Navbar/>
-    </div>
-    <div>
-      <h1>Home Page</h1>
-      <p>Here is the homepage</p>
+      <Outlet/>
     </div>
     </>
   );
-};
+}
 
 export default App;
