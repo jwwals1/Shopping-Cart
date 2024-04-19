@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom" 
 
-function Shop() {
+function Cart() {
     return ( 
         <>
         <nav>
@@ -9,7 +9,7 @@ function Shop() {
            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to=".">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <Link to="/cart">Cart</Link>
@@ -18,11 +18,11 @@ function Shop() {
       </nav>
         <div>
             <div>
-                <h2>This is the shop page</h2>
+                <h2>This is the cart page</h2>
             </div>
         </div>
         </>
     )
 }
 
-export default Shop
+export default Cart
