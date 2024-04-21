@@ -1,0 +1,19 @@
+.card {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr  1fr 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 400px;
+    border: solid;
+    border-radius: 10px;
+}
+
+.itemImage {
+    width: 100px;
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    margin: 5px;
+}

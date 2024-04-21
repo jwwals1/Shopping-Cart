@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 // import { useState } from 'react'
 
+// eslint-disable-next-line react/prop-types
 function Navbar() {
-  // const [count, setCount] = useState(0)
     return ( 
         <>
         <div>

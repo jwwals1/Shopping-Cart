@@ -1,12 +1,28 @@
 // import { Link } from "react-router-dom" 
 // import Navbar from "./navbar"
+import { useState } from "react"
+import { useEffect } from "react"
+import Card from "./Card"
 
 function Shop() {
-    return ( 
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>{
+                setItems(json)
+            })
+    },[])
+
+    return (  
         <>
         <div>
             <div>
-                <h2>This is the shop page</h2>
+            <h2>This is the shop page</h2>
+            </div>
+            <div className="item">
+                {items.map(item => <Card key={item.id} item = {item}/>)}
             </div>
         </div>
         </>
