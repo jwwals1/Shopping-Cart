@@ -1,18 +1,29 @@
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import { Outlet } from "react-router-dom";
-// import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Shop from "./components/Shop.jsx"
+import Cart from "./components/Cart.jsx"
+import Home from "./components/Home.jsx";
 
 // eslint-disable-next-line react/prop-types
-function App () {
-  const [cartItems, setCartItems] = useState([])
+function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <>
-    <div>
-      <Navbar counter={cartItems.length}/>
-      <Outlet context={[cartItems, setCartItems]}/>
-    </div>
+      <Navbar cartItems={cartItems} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="shop"
+          element={<Shop cartItems={cartItems} setCartItems={setCartItems} />}
+        />
+        <Route
+          path="cart"
+          element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
+        />
+      </Routes>
     </>
   );
 }

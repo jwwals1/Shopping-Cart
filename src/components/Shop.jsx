@@ -2,22 +2,25 @@
 // import Navbar from "./navbar"
 import { useState } from "react"
 import { useEffect } from "react"
-import Card from "./Card"
-import { useOutletContext } from "react-router-dom"
+// import Card from "./Card"
 
-function Shop() {
+
+// eslint-disable-next-line react/prop-types
+function Shop({ cartItems, setCartItems }) {
     const [items, setItems] = useState([])
-    const [cartItems, setCartItems] = useOutletContext()
+    // const [cartItems, setCartItems] = useState()
 
-    function addCart(item, counter) {
-        const array = cartItems.map(cartproduct => {
-            if (cartproduct.id === item.id) {
-                return {...item, counter: cartproduct.counter + counter}
-            }
-            return cartproduct
-        })
-        setCartItems(array)
-    }
+    useEffect(() => {
+        fetch("https://fakestoreapi.com/products")
+          .then((res) => res.json())
+          .then((json) => {
+            setItems(json);
+          })
+      }, []);
+
+      const addToCart = (item) => {
+        setCartItems([...cartItems, { ...item, quantity: 1 }]);
+      };
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -27,18 +30,33 @@ function Shop() {
             })
     },[])
 
-    return (  
-        <>
+    return (
         <div>
+          <div>
+            <h1>Shop</h1>
+          </div>
             <div>
-            <h2>This is the shop page</h2>
-            </div>
-            <div className="item">
-                {items.map(item => <Card key={item.id} item = {item} setCartItems ={addCart}/>)}
+              {items.map((item) => (
+                <div key={item.id} id={item.id} className="card">
+                  <img
+                    className="itemImage"
+                    src={item.image}
+                    alt={item.title}
+                  />
+                  <div>
+                    <div>{item.title}</div>
+                    <div>${item.price}</div>
+                    <div> 
+                        <button onClick={() => addToCart(item)}>
+                          Add to cart
+                        </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
         </div>
-        </>
-    )
-}
+      );
+    }
 
 export default Shop

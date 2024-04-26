@@ -1,19 +1,32 @@
-import { Link } from "react-router-dom"
-// import { useState } from 'react'
+import { Link } from "react-router-dom";
+
 
 // eslint-disable-next-line react/prop-types
-function Navbar({counter}) {
-    return ( 
-        <>
-        <div>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="shop">Shop</Link></li>
-                <li><Link to="cart">Cart <div>{counter}</div></Link></li>
-            </ul>
-        </div>
-        </>
-    )
+function Header({ cartItems }) {
+  return (
+    <header>
+      <div className="headerLinks">
+        <Link to="/">
+          <div className="link">Home</div>
+        </Link>
+        <Link to="shop">
+          <div className="link">Shop</div>
+        </Link>
+        <Link to="cart">
+          <div className="link">
+            Cart
+            {cartItems> 0 && (
+              <div className="cart-count">{cartItems}</div>
+            )}
+
+          </div>
+        </Link>
+      </div>
+    </header>
+  );
 }
 
-export default Navbar
+
+
+export default Header;
+  
