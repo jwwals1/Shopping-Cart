@@ -6,20 +6,19 @@ import { Link } from "react-router-dom";
 function Navbar({ cartItems }) {
   return (
     <header>
-      <div className="headerLinks">
+      <div className="navbar">
         <Link to="/">
-          <div className="link">Home</div>
+          <div className="nav-link">Home</div>
         </Link>
         <Link to="shop">
-          <div className="link">Shop</div>
+          <div className="nav-link">Shop</div>
         </Link>
-        <Link to="cart">
-          <div className="link">
+        <Link to="nav-link">
+          <div className="nav-cart">
             Cart
-            {cartItems.length > 0 && (
+            <div>
               <div className="cart-count">{cartItems.length}</div>
-            )}
-
+            </div>
           </div>
         </Link>
       </div>
