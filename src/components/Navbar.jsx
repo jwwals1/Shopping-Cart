@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
-function Header({ cartItems }) {
+function Navbar({ cartItems }) {
   return (
     <header>
       <div className="headerLinks">
@@ -15,8 +16,8 @@ function Header({ cartItems }) {
         <Link to="cart">
           <div className="link">
             Cart
-            {cartItems> 0 && (
-              <div className="cart-count">{cartItems}</div>
+            {cartItems.length > 0 && (
+              <div className="cart-count">{cartItems.length}</div>
             )}
 
           </div>
@@ -28,5 +29,5 @@ function Header({ cartItems }) {
 
 
 
-export default Header;
+export default Navbar;
   

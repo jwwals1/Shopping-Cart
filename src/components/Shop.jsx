@@ -20,6 +20,7 @@ function Shop({ cartItems, setCartItems }) {
 
       const addToCart = (item) => {
         setCartItems([...cartItems, { ...item, quantity: 1 }]);
+        alert("Item added to cart")
       };
 
     useEffect(() => {
