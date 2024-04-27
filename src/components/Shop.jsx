@@ -32,11 +32,11 @@ function Shop({ cartItems, setCartItems }) {
     },[])
 
     return (
-        <div>
+        <div className="shopPage">
           <div>
             <h1>Shop</h1>
           </div>
-            <div>
+            <div className="products">
               {items.map((item) => (
                 <div key={item.id} id={item.id} className="card">
                   <img
@@ -45,9 +45,9 @@ function Shop({ cartItems, setCartItems }) {
                     alt={item.title}
                   />
                   <div>
-                    <div>{item.title}</div>
-                    <div>${item.price}</div>
-                    <div> 
+                    <div>{item.title}</div><br />
+                    <div>${item.price}</div><br />
+                    <div className="add-to-cart-btn"> 
                         <button onClick={() => addToCart(item)}>
                           Add to cart
                         </button>

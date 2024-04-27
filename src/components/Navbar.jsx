@@ -13,7 +13,7 @@ function Navbar({ cartItems }) {
         <Link to="shop">
           <div className="nav-link">Shop</div>
         </Link>
-        <Link to="nav-link">
+        <Link to="cart">
           <div className="nav-cart">
             Cart
             <div>

@@ -3,23 +3,45 @@ body {
     padding: 0;
 }
 
+.shopPage {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+/* .item {
+    display: grid;
+    justify-content: center;
+    margin: 5px;
+} */
+
 .card {
-    /* display: grid; */
-    /* grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
     border: solid;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 400px;
+    padding: 5px;
+    min-height: 300px;
+    justify-content: space-between;
 }
 
 .itemImage {
     width: 100px;
 }
 
-.item {
-    display: grid;
-    justify-content: center;
-    margin: 5px;
+.add-to-cart-btn {
+    display: flex;
+    justify-content: flex-end;
 }
+
 
 .navbar {
     display: flex;
