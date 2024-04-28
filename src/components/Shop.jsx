@@ -33,22 +33,22 @@ function Shop({ cartItems, setCartItems }) {
 
     return (
         <div className="shopPage">
-          <div>
-            <h1>Shop</h1>
+          <div className="shopping-title">
+            <h1>Shopping Page</h1>
           </div>
             <div className="products">
               {items.map((item) => (
                 <div key={item.id} id={item.id} className="card">
                   <img
-                    className="itemImage"
+                    className="item-Image"
                     src={item.image}
                     alt={item.title}
                   />
                   <div>
                     <div>{item.title}</div><br />
                     <div>${item.price}</div><br />
-                    <div className="add-to-cart-btn"> 
-                        <button onClick={() => addToCart(item)}>
+                    <div className="btn-container"> 
+                        <button className="add-to-cart-btn" onClick={() => addToCart(item)}>
                           Add to cart
                         </button>
                     </div>
