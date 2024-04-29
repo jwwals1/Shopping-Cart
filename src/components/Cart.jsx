@@ -41,9 +41,9 @@ function Cart({ cartItems, setCartItems }) {
   }, [cartItems]);
 
   return (
-    <div >
+    <div className="cart-page">
       <div >
-        <h1>Cart</h1>
+        <h1>Shopping Cart Page</h1>
       </div>
       {cartItems.length > 0 ? (
         <div>
@@ -52,14 +52,23 @@ function Cart({ cartItems, setCartItems }) {
               {totalItems} {totalItems === 1 ? "item" : "items"}
             </h2>
           </div>
-          <div>
+          <div className="products">
             {cartItems.map((product) => (
               <div key={product.id} className="card">
-                <img  className="itemImage" src={product.image} alt={product.title} />
+                <img  className="item-Image" src={product.image} alt={product.title} />
                 <div>
                   <div >
                     <h2>{product.title}</h2>
 
+                  </div>
+                  <div>
+                    {product.category}
+                  </div><br />
+                  <div>
+                    {product.description}
+                  </div>
+                  <div><br />
+                    Rating: {product.rating.rate}
                   </div>
                   <div >
                     <p>${(product.price * product.quantity).toFixed(2)}</p>
@@ -87,7 +96,7 @@ function Cart({ cartItems, setCartItems }) {
       ) : (
         <div>
           <div >
-            <h1>Your cart is empty...</h1>
+            <h1>Your cart is empty!</h1>
             <h2>Add some items to your cart!</h2>
           </div>
         </div>
