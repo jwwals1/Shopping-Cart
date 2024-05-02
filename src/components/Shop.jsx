@@ -32,7 +32,7 @@ function Shop({ cartItems, setCartItems }) {
     },[])
 
     return (
-        <div className="shopPage">
+        <div className="shop-Page">
           <div className="shopping-title">
             <h1>Shopping Page</h1>
           </div>

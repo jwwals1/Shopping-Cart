@@ -8,7 +8,7 @@ function Navbar({ cartItems }) {
     <header>
       <div className="navbar">
         <Link to="/">
-          <div className="nav-link">Home</div>
+          <div className="nav-link" textDecoration={"none"}>Home</div>
         </Link>
         <Link to="shop">
           <div className="nav-link">Shop</div>

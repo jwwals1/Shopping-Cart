@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-.shopPage {
+.shop-Page {
     margin-left: 40px;
     margin-right: 40px;
     /* background: linear-gradient(to left, #09203f 0%, #537895 100%); */
@@ -75,6 +75,8 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: solid;
+    background-color: rgb(8, 8, 124);
+    text-decoration: none !important;
 }
 
 .nav-cart {
@@ -83,10 +85,12 @@ body {
     margin-left: 10px;
     margin-right: 40px;
     margin-top: 15px;
+    color: white;
 }
 
 .cart-count {
     margin-left: 10px;
+    color: white;
 }
 
 .nav-link {
@@ -95,9 +99,109 @@ body {
     margin-right: 40px;
     margin-top: 15px;
     margin-bottom: 15px;
+    color: white;
+    text-decoration: transparent !important;
 }
+
+/* .nav-link:link {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+} */
+
+/* .nav-link:visited {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+} */
+
+/* .nav-link:hover {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+} */
+
+/* .nav-link:active {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+} */
 
 .cart-page {
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.cart-title {
+    display: grid;
+    justify-content: center;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cart-value {
+    display: grid;
+    justify-content: center;
+    margin-left: 40px;
+    font-size: 20px;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -40px;
+    margin-bottom: -10px;
+}
+
+.homepage-photo {
+    width: 200px;
+    border-radius: 50px;
+    margin-left: 100px;
+}
+
+.homepage {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.homepage-title {
+    display: grid;
+    justify-content: center;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+
+}
+
+.homepage-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8, 8, 124);
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 50px;
+}
+
+.homepage-description {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

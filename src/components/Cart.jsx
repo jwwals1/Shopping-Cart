@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 
-function Cart({ cartItems, setCartItems }) {
+function Cart({ cartItems }) {
   const [totalItems, setTotalItems] = useState(0);
 
 
@@ -14,25 +14,6 @@ function Cart({ cartItems, setCartItems }) {
     setTotalItems(total);
   };
 
-  const quantityChange = (id, type) => {
-    const updatedItems = cartItems.map((product) => {
-      if (product.id === id) {
-        let newQuantity =
-          type === "increment" ? product.quantity + 1 : product.quantity - 1;
-        if (newQuantity <= 0) {
-          return null;
-        } else {
-          return {
-            ...product,
-            quantity: newQuantity,
-          };
-        }
-      }
-      return product;
-    });
-
-    setCartItems(updatedItems.filter((product) => product !== null));
-  };
 
 
 
@@ -42,12 +23,12 @@ function Cart({ cartItems, setCartItems }) {
 
   return (
     <div className="cart-page">
-      <div >
+      <div className="cart-title">
         <h1>Shopping Cart Page</h1>
       </div>
       {cartItems.length > 0 ? (
         <div>
-          <div >
+          <div className="cart-value">
             <h2>
               {totalItems} {totalItems === 1 ? "item" : "items"}
             </h2>
@@ -72,21 +53,6 @@ function Cart({ cartItems, setCartItems }) {
                   </div>
                   <div >
                     <p>${(product.price * product.quantity).toFixed(2)}</p>
-                    <div className="quantity">
-                      <button
-                        value="-"
-                        onClick={() => quantityChange(product.id, "decrement")}
-                      >
-                        -
-                      </button>
-                      {product.quantity}
-                      <button
-                        value="+"
-                        onClick={() => quantityChange(product.id, "increment")}
-                      >
-                        +
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
