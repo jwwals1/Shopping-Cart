@@ -7,15 +7,15 @@ function Navbar({ cartItems }) {
   return (
     <header>
       <div className="navbar">
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="nav-link" textDecoration={"none"}>Home</div>
         </Link>
-        <Link to="shop">
-          <div className="nav-link">Shop</div>
+        <Link to="shop" style={{ textDecoration: 'none' }}>
+          <div className="nav-link" >Shop</div>
         </Link>
-        <Link to="cart">
+        <Link to="cart" style={{ textDecoration: 'none' }}>
           <div className="nav-cart">
-            Cart
+            <img src="../media/cart.svg" alt="cart logo" className="cart-logo"/>
             <div>
               <div className="cart-count">{cartItems.length}</div>
             </div>
