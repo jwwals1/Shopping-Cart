@@ -63,7 +63,7 @@ function Cart({ cartItems }) {
         <div>
           <div >
             <h1>Your cart is empty!</h1>
-            <h2>Add some items to your cart!</h2>
+            <h2>Add items to your cart!</h2>
           </div>
         </div>
       )}

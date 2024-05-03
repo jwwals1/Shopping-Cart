@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Shop from "./components/Shop.jsx"
 import Cart from "./components/Cart.jsx"
 import Home from "./components/Home.jsx";
+import Footer from "./components/footer.jsx";
 
 // eslint-disable-next-line react/prop-types
 function App() {
@@ -24,6 +25,7 @@ function App() {
           element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}
         />
       </Routes>
+      <Footer/>
     </>
   );
 }
