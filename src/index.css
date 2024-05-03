@@ -5,10 +5,9 @@ body {
     min-height: 100vh;
 }
 
-.shop-Page {
+.shop-Page, .cart-page, .homepage-page {
     margin-left: 40px;
     margin-right: 40px;
-    /* background: linear-gradient(to left, #09203f 0%, #537895 100%); */
 }
 
 
@@ -26,11 +25,6 @@ body {
     gap: 20px;
     padding-bottom: 80px;
 }
-/* .item {
-    display: grid;
-    justify-content: center;
-    margin: 5px;
-} */
 
 .card {
     display: flex;
@@ -107,51 +101,6 @@ body {
     text-decoration: transparent !important;
 }
 
-/* .nav-link:link {
-    font-size: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-decoration: none;
-} */
-
-/* .nav-link:visited {
-    font-size: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-decoration: none;
-} */
-
-/* .nav-link:hover {
-    font-size: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-decoration: none;
-} */
-
-/* .nav-link:active {
-    font-size: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: white;
-    text-decoration: none;
-} */
-
-.cart-page {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
 .cart-title {
     display: grid;
     justify-content: center;
@@ -175,11 +124,6 @@ body {
     width: 200px;
     border-radius: 50px;
     margin-left: 100px;
-}
-
-.homepage {
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .homepage-title {
@@ -219,17 +163,16 @@ body {
     justify-content: space-between;
     font-size: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* padding-top: 5px;
-    padding-bottom: 5px; */
 }
 
-.footer-description {
+.footer-description  {
     margin-left: 30px;
 }
 
 .footer-copyright {
     margin-right: 30px;
 }
+
 
 .empty-cart {
     display: grid;

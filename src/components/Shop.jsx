@@ -1,14 +1,11 @@
-// import { Link } from "react-router-dom" 
-// import Navbar from "./navbar"
 import { useState } from "react"
 import { useEffect } from "react"
-// import Card from "./Card"
+import swal from 'sweetalert';
 
 
 // eslint-disable-next-line react/prop-types
 function Shop({ cartItems, setCartItems }) {
     const [items, setItems] = useState([])
-    // const [cartItems, setCartItems] = useState()
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -20,7 +17,7 @@ function Shop({ cartItems, setCartItems }) {
 
       const addToCart = (item) => {
         setCartItems([...cartItems, { ...item, quantity: 1 }]);
-        alert("Item added to cart")
+        swal(`${item.title} added to cart!`)
       };
 
     useEffect(() => {
