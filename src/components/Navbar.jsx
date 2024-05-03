@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import cart from "../media/cart.svg"
 
 
-// eslint-disable-next-line react/prop-types
 function Navbar({ cartItems }) {
   return (
     <header>
