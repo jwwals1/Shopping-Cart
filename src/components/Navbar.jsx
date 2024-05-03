@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import cart from "../media/cart.svg"
 
 
 // eslint-disable-next-line react/prop-types
@@ -15,7 +16,7 @@ function Navbar({ cartItems }) {
         </Link>
         <Link to="cart" style={{ textDecoration: 'none' }}>
           <div className="nav-cart">
-            <img src="../media/cart.svg" alt="cart logo" className="cart-logo"/>
+            <img src={cart} alt="cart logo" className="cart-logo"/>
             <div>
               <div className="cart-count">{cartItems.length}</div>
             </div>

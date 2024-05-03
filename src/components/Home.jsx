@@ -1,5 +1,4 @@
-// import { Link } from "react-router-dom" 
-// import Navbar from "../components/navbar"
+import ecom from "../media/ecom.webp"
 
 function Home() {
     return ( 
@@ -10,7 +9,7 @@ function Home() {
         </div>
         <div className="homepage-content">
             <h3 className="homepage-description">This is an online ecommerce webpage</h3>
-            <img src="../media/ecom.webp" alt="ecommerce stock photo" className="homepage-photo"/>
+            <img src={ecom} alt="ecommerce stock photo" className="homepage-photo"/>
         </div>
         </div>
         </>
